@@ -9,9 +9,8 @@ metadata:
   namespace: default
 spec:
   ports:
-  - port: 32000
+  - port: 80
     protocol: TCP
-    targetPort: 32000
   selector:
     app: mydeploy
   type: NodePort
