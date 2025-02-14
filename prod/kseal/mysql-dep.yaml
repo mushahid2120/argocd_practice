@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: mydeploy
+    app: mydeploy-mysql
   name: mydeploy
 spec:
   replicas: 3
@@ -21,7 +21,10 @@ spec:
       - image: mysql
         name: mydb
         env:
-          - name: MYSQL_ROOT_PASSWD
-            value: redhat
+          - name: MYSQL_ROOT_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: mysecret
+                key: mypassword
         resources: {}
 status: {}
