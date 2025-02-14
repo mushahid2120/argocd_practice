@@ -19,7 +19,7 @@ spec:
         app: mydp
     spec:
       containers:
-      - image: mushahid144/docforargo-py:latest
+      - image: mushahid144/docforargo-py:v10
         name: docforargo-py
         resources: {}
 status: {}
