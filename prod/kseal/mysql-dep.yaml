@@ -4,7 +4,7 @@ metadata:
   creationTimestamp: null
   labels:
     app: mydeploy-mysql
-  name: mydeploy
+  name: mydeploy-sql
 spec:
   replicas: 3
   selector:
